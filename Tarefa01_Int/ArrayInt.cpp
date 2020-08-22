@@ -1,7 +1,6 @@
 #include "ArrayInt.h"
 #include <iostream>
 #include <cstdio>
-#include <iomanip>
 
 using namespace std;
 
@@ -33,10 +32,7 @@ void ArrayInt::remover()
 int ArrayInt::obterValorEm(int i)
 {
 	if (i < tamanho && i >= 0) {
-		if (array[i] != NULL) {
-			return array[i];
-		}
-		else return NULL;
+		return array[i];
 	}
 	else {
 		cout << "A posição selecionada é inexistente\n";
@@ -49,13 +45,11 @@ int ArrayInt::obterValor()
 	return array[indice-1];
 }
 
-int ArrayInt::mostrarValores()
+void ArrayInt::mostrarValores()
 {
 	for (int i = 0; i < tamanho; i++) {
-		cout << array[i];
-		cout << endl;
+		cout << array[i] << endl;
 	}
-	return 0;
 }
 
 void ArrayInt::desalocaArray()

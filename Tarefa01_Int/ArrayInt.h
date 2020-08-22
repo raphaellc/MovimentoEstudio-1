@@ -8,7 +8,7 @@ public:
 	void remover();
 	int obterValorEm(int i);
 	int obterValor();
-	int mostrarValores();
+	void mostrarValores();
 	void desalocaArray();
 
 protected:
