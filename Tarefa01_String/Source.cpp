@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdio>
-#include <iomanip>
 #include <string>
 #include "ArrayInt.h"
 
@@ -44,41 +43,6 @@ int main() {
 	array.desalocaArray();
 
 	cout << "|-------------------------------------------------|\n";
-
-	//string a = "ola";
-	//cout << a;
-
-	//cout << endl;
-
-	//int* x = new int[3];
-	//x[0] = 0;
-	//x[1] = 1;
-	//x[2] = 2;
-
-	//for (int i = 0; i < 3; i++) {
-	//	cout << x[i];
-	//}
-	//
-	//cout << endl;
-
-	//string* b = new string;
-
-	//*b = "WTF";
-	//cout << *b;
-
-	//delete b;
-
-	//cout << endl;
-
-	//string* c = new string[2];
-	//c[0] = "zero";
-	//c[1] = "um";
-
-	//for (int i = 0; i < 2; i++) {
-	//	cout << c[i] << ", ";
-	//}
-
-	//cout << endl;
 
 	system("pause");
 	return 0;

@@ -1,7 +1,6 @@
 #include "ArrayInt.h"
 #include <iostream>
 #include <cstdio>
-#include <iomanip>
 
 ArrayString::ArrayString()
 {
