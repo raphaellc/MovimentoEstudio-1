@@ -1,9 +1,5 @@
 #include <iostream>
-#include <ctime>
-#include <string>
-#include <cmath>
 #include <cstdio>
-#include <fstream>
 #include <iomanip>
 #include "ArrayInt.h"
 
@@ -11,62 +7,6 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "ptb");
-
-	/*int* array;
-	int* arrayTemp;
-	int tam, tamTemp;
-	tam = 5;
-
-	array = new int[tam];
-
-
-	for (int i = 0; i < tam; i++) {
-		array[i] = NULL;
-	}
-
-
-	for (int i = 0; i < tam; i++) {
-		cout << array[i];
-	}
-
-	cout << endl;
-	
-	tamTemp = 10;
-
-	arrayTemp = new int[tam];
-
-	for (int i = 0; i < tam; i++) {
-		arrayTemp[i] = array[i];
-	}
-
-	for (int i = 0; i < 10; i++) {
-		cout << array[i];
-		cout << endl;
-	}
-	
-	array = new int[tamTemp];
-
-	for (int i = tam; i < tamTemp; i++) {
-		array[i] = NULL;
-	}
-
-	for (int i = 0; i < tam; i++) {
-		array[i] = arrayTemp[i];
-	}
-
-	for (int i = tam; i < tamTemp; i++) {
-		if(array[i] == 0) 77;
-		else array[i] = 56;
-	}
-	
-	for (int i = 0; i < tamTemp; i++) {
-		cout << array[i];
-		cout << endl;
-	}
-	cout << endl;
-
-	delete[] array;
-	delete[] arrayTemp;*/
 
 	ArrayInt array;
 
@@ -81,12 +21,28 @@ int main() {
 
 	array.remover();
 
+	cout << "Representação do array:\n";
 	array.mostrarValores();
 
-	cout << array.obterValor();
-	cout << array.obterValorEm(3);
+	cout << "|-------------------------------------------------|\n";
 
-	array.~ArrayInt();
+	array.adiciona(8);
+	array.adiciona(9);
+	array.adiciona(10);
+	array.adiciona(11);
+
+	array.remover();
+
+	cout << "Representação do array:\n";
+	array.mostrarValores();
+
+	cout << "|-------------------------------------------------|\n";
+	cout << "Representação do ultimo valor do array: " << array.obterValor() << endl;
+	cout << "Representação do valor do array na posição 3: " << array.obterValorEm(3) << endl;
+
+	array.desalocaArray();
+
+	cout << "|-------------------------------------------------|\n";
 
 	system("pause");
 	return 0;

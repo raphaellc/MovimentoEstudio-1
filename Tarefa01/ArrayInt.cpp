@@ -17,11 +17,6 @@ ArrayInt::ArrayInt()
 	}
 }
 
-ArrayInt::~ArrayInt()
-{
-	delete[] array;
-}
-
 void ArrayInt::adiciona(int i)
 {
 	if (indice >= tamanho) realocar();
@@ -61,6 +56,11 @@ int ArrayInt::mostrarValores()
 		cout << endl;
 	}
 	return 0;
+}
+
+void ArrayInt::desalocaArray()
+{
+	delete[] array;
 }
 
 void ArrayInt::realocar()
