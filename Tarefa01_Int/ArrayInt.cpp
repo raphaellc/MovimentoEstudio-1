@@ -68,13 +68,14 @@ void ArrayInt::realocar()
 
 	array = new int[tamNovo];
 
+	for (int i = 0; i < tamanho; i++) {
+		array[i] = arrayTemp[i];
+	}
+
 	for (int i = tamanho; i < tamNovo; i++) {
 		array[i] = NULL;
 	}
 
-	for (int i = 0; i < tamanho; i++) {
-		array[i] = arrayTemp[i];
-	}
 	tamanho = tamNovo;
 	
 	delete[] arrayTemp;
