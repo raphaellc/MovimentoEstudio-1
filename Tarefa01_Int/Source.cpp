@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdio>
-#include <iomanip>
 #include "ArrayInt.h"
 
 using namespace std;
