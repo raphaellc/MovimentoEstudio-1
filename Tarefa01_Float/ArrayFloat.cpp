@@ -18,7 +18,7 @@ ArrayFloat::ArrayFloat()
 
 void ArrayFloat::adiciona(float i)
 {
-	if (indice >= tamanho) realocar();
+	if (indice >= tamanho) realocar();//realocar == aumentar tamanho
 	array[indice] = i;
 	indice++;
 }
