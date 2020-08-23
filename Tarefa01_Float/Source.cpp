@@ -1,35 +1,22 @@
 #include <iostream>
 #include <cstdio>
-#include <string>
-#include "ArrayString.h"
+#include "ArrayFloat.h"
 
 using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "ptb");
 
-	ArrayString array;
+	ArrayFloat array;
 
-	array.adiciona("um");
-	array.adiciona("dois");
-	array.adiciona("tres");
-	array.adiciona("quatro");
-	array.adiciona("cinco");
-	array.adiciona("seis");
-	array.adiciona("sete");
-	array.adiciona("oito");
-
-	array.remover();
-
-	cout << "Representação do array:\n";
-	array.mostrarValores();
-
-	cout << "|-------------------------------------------------|\n";
-
-	array.adiciona("oito");
-	array.adiciona("nove");
-	array.adiciona("dez");
-	array.adiciona("onze");
+	array.adiciona(1);
+	array.adiciona(2);
+	array.adiciona(3);
+	array.adiciona(4);
+	array.adiciona(5);
+	array.adiciona(6);
+	array.adiciona(7);
+	array.adiciona(8);
 
 	array.remover();
 
@@ -37,8 +24,20 @@ int main() {
 	array.mostrarValores();
 
 	cout << "|-------------------------------------------------|\n";
-	cout << "Último valor do array: " << array.obterValor() << endl;
-	cout << "Valor do array na posição 3: " << array.obterValorEm(3) << endl;
+
+	array.adiciona(8);
+	array.adiciona(9);
+	array.adiciona(10);
+	array.adiciona(11);
+
+	array.remover();
+
+	cout << "Representação do array:\n";
+	array.mostrarValores();
+
+	cout << "|-------------------------------------------------|\n";
+	cout << "Representação do ultimo valor do array: " << array.obterValor() << endl;
+	cout << "Representação do valor do array na posição 3: " << array.obterValorEm(3) << endl;
 	cout << "Quantidade de elementos no array: " << array.getQtdElementos() << endl;
 	cout << "Tamanho do array: " << array.getTamanhoArray() << endl;
 

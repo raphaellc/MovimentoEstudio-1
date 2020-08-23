@@ -1,4 +1,4 @@
-#include "ArrayInt.h"
+#include "ArrayString.h"
 #include <iostream>
 #include <cstdio>
 
