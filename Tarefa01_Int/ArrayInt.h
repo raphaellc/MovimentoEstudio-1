@@ -3,6 +3,7 @@ class ArrayInt
 {
 public:
 	ArrayInt();
+	~ArrayInt() {};
 
 	void adiciona(int i);
 	void remover();

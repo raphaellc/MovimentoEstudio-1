@@ -42,6 +42,7 @@ int main() {
 	cout << "Tamanho do array: " << array.getTamanhoArray() << endl;
 
 	array.desalocaArray();
+	array.~ArrayFloat();
 
 	cout << "|-------------------------------------------------|\n";
 

@@ -7,6 +7,7 @@ class ArrayString
 {
 public:
 	ArrayString();
+	~ArrayString() {};
 
 	void adiciona(string s);
 	void remover();

@@ -3,6 +3,7 @@ class ArrayFloat
 {
 public:
 	ArrayFloat();
+	~ArrayFloat() {};
 
 	void adiciona(float i);
 	void remover();

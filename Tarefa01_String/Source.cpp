@@ -43,8 +43,9 @@ int main() {
 	cout << "Tamanho do array: " << array.getTamanhoArray() << endl;
 
 	array.desalocaArray();
+	array.~ArrayString();
 
-	cout << "|-------------------------------------------------|\n";
+	cout << "|-------------------------------------------------|\n";	
 
 	system("pause");
 	return 0;
