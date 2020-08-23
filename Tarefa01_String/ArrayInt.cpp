@@ -6,7 +6,7 @@ ArrayString::ArrayString()
 {
 	array = new string[5];
 	arrayTemp = nullptr;
-	indice = qtd_elementos = 0;
+	indice = 0;
 	tamanho = tamNovo = 5;
 
 	for (int i = 0; i < tamanho; i++) {
@@ -43,18 +43,27 @@ string ArrayString::obterValor()
 	return array[indice - 1];
 }
 
-int ArrayString::mostrarValores()
+void ArrayString::mostrarValores()
 {
 	for (int i = 0; i < tamanho; i++) {
 		cout << array[i];
 		cout << endl;
 	}
-	return 0;
 }
 
 void ArrayString::desalocaArray()
 {
 	delete[] array;
+}
+
+int ArrayString::getQtdElementos()
+{
+	return indice;
+}
+
+int ArrayString::getTamanhoArray()
+{
+	return tamanho;
 }
 
 void ArrayString::realocar()

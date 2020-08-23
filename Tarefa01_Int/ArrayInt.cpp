@@ -8,7 +8,7 @@ ArrayInt::ArrayInt()
 {
 	array = new int[5];
 	arrayTemp = nullptr;
-	indice = qtd_elementos = 0;
+	indice = 0;
 	tamanho = tamNovo = 5;
 
 	for (int i = 0; i < tamanho; i++) {
@@ -55,6 +55,16 @@ void ArrayInt::mostrarValores()
 void ArrayInt::desalocaArray()
 {
 	delete[] array;
+}
+
+int ArrayInt::getQtdElementos()
+{
+	return indice;
+}
+
+int ArrayInt::getTamanhoArray()
+{
+	return tamanho;
 }
 
 void ArrayInt::realocar()

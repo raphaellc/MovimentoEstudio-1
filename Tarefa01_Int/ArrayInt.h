@@ -11,9 +11,12 @@ public:
 	void mostrarValores();
 	void desalocaArray();
 
+	int getQtdElementos();
+	int getTamanhoArray();
+
 protected:
 	int *array, *arrayTemp;
-	int indice, tamanho, tamNovo, qtd_elementos;
+	int indice, tamanho, tamNovo;
 
 	void realocar();
 };

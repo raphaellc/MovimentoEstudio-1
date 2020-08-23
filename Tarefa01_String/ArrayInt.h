@@ -12,12 +12,15 @@ public:
 	void remover();
 	string obterValorEm(int i);
 	string obterValor();
-	int mostrarValores();
+	void mostrarValores();
 	void desalocaArray();
+
+	int getQtdElementos();
+	int getTamanhoArray();
 
 protected:
 	string* array, *arrayTemp;
-	int indice, tamanho, tamNovo, qtd_elementos;
+	int indice, tamanho, tamNovo;
 
 	void realocar();
 };
