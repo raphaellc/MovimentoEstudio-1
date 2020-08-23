@@ -38,7 +38,7 @@ int main() {
 
 	cout << "|-------------------------------------------------|\n";
 	cout << "Último valor do array: " << array.obterValor() << endl;
-	cout << "Valor do array na posição 3: " << array.obterValorEm(3) << endl;
+	cout << "Valor do array na posição [3]: " << array.obterValorEm(3) << endl;
 	cout << "Quantidade de elementos no array: " << array.getQtdElementos() << endl;
 	cout << "Tamanho do array: " << array.getTamanhoArray() << endl;
 
