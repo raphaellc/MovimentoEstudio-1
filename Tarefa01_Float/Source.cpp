@@ -9,14 +9,14 @@ int main() {
 
 	ArrayFloat array;
 
-	array.adiciona(1);
-	array.adiciona(2);
-	array.adiciona(3);
-	array.adiciona(4);
-	array.adiciona(5);
-	array.adiciona(6);
-	array.adiciona(7);
-	array.adiciona(8);
+	array.adiciona(1.1);
+	array.adiciona(2.1);
+	array.adiciona(3.1);
+	array.adiciona(4.1);
+	array.adiciona(5.1);
+	array.adiciona(6.1);
+	array.adiciona(7.1);
+	array.adiciona(8.1);
 
 	array.remover();
 
@@ -25,10 +25,10 @@ int main() {
 
 	cout << "|-------------------------------------------------|\n";
 
-	array.adiciona(8);
-	array.adiciona(9);
-	array.adiciona(10);
-	array.adiciona(11);
+	array.adiciona(8.2);
+	array.adiciona(9.1);
+	array.adiciona(10.1);
+	array.adiciona(11.1);
 
 	array.remover();
 

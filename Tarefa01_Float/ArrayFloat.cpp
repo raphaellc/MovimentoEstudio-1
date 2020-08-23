@@ -6,7 +6,7 @@ using namespace std;
 
 ArrayFloat::ArrayFloat()
 {
-	array = new int[5];
+	array = new float[5];
 	arrayTemp = nullptr;
 	indice = 0;
 	tamanho = tamNovo = 5;
@@ -16,7 +16,7 @@ ArrayFloat::ArrayFloat()
 	}
 }
 
-void ArrayFloat::adiciona(int i)
+void ArrayFloat::adiciona(float i)
 {
 	if (indice >= tamanho) realocar();
 	array[indice] = i;
@@ -29,7 +29,7 @@ void ArrayFloat::remover()
 	array[indice] = NULL;
 }
 
-int ArrayFloat::obterValorEm(int i)
+float ArrayFloat::obterValorEm(int i)
 {
 	if (i < tamanho && i >= 0) {
 		return array[i];
@@ -40,7 +40,7 @@ int ArrayFloat::obterValorEm(int i)
 	}
 }
 
-int ArrayFloat::obterValor()
+float ArrayFloat::obterValor()
 {
 	return array[indice-1];
 }
@@ -70,13 +70,13 @@ int ArrayFloat::getTamanhoArray()
 void ArrayFloat::realocar()
 {
 	tamNovo += 5;
-	arrayTemp = new int[tamanho];
+	arrayTemp = new float[tamanho];
 
 	for (int i = 0; i < tamanho; i++) {
 		arrayTemp[i] = array[i];
 	}
 
-	array = new int[tamNovo];
+	array = new float[tamNovo];
 
 	for (int i = 0; i < tamanho; i++) {
 		array[i] = arrayTemp[i];

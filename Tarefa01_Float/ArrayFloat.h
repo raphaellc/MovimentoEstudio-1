@@ -4,10 +4,10 @@ class ArrayFloat
 public:
 	ArrayFloat();
 
-	void adiciona(int i);
+	void adiciona(float i);
 	void remover();
-	int obterValorEm(int i);
-	int obterValor();
+	float obterValorEm(int i);
+	float obterValor();
 	void mostrarValores();
 	void desalocaArray();
 
@@ -15,7 +15,7 @@ public:
 	int getTamanhoArray();
 
 protected:
-	int *array, *arrayTemp;
+	float *array, *arrayTemp;
 	int indice, tamanho, tamNovo;
 
 	void realocar();
