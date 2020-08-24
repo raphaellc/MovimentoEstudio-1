@@ -32,7 +32,6 @@ int main() {
 	array.adiciona("onze");
 
 	array.remover();
-	array.remover();
 
 	cout << "Representação do array:\n";
 	array.mostrarValores();
