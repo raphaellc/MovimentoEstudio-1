@@ -75,6 +75,7 @@ void ArrayString::realocar()
 		arrayTemp[i] = array[i];
 	}
 
+	delete[] array;
 	array = new string[tamNovo];
 
 	for (int i = tamanho; i < tamNovo; i++) {

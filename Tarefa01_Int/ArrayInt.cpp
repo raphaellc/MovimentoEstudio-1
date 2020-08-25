@@ -76,6 +76,7 @@ void ArrayInt::realocar()
 		arrayTemp[i] = array[i];
 	}
 
+	delete[] array;
 	array = new int[tamNovo];
 
 	for (int i = 0; i < tamanho; i++) {
