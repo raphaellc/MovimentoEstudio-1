@@ -76,6 +76,7 @@ void ArrayFloat::realocar()
 		arrayTemp[i] = array[i];
 	}
 
+	delete[] array;
 	array = new float[tamNovo];
 
 	for (int i = 0; i < tamanho; i++) {
