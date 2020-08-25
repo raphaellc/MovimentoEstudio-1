@@ -15,7 +15,7 @@ public:
 	int getQtdElementos();
 	int getTamanhoArray();
 
-protected:
+private:
 	int *array, *arrayTemp;
 	int indice, tamanho, tamNovo;
 
