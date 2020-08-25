@@ -9,7 +9,7 @@ int main() {
 
 	ArrayInt array;
 
-	array.adiciona(1);
+	array.adiciona(5);
 	array.adiciona(2);
 	array.adiciona(3);
 	array.adiciona(4);
