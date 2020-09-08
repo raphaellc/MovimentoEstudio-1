@@ -11,7 +11,7 @@ Jogo::~Jogo()
 
 void Jogo::inicializar()
 {
-	uniInicializar(800, 600, false);
+	uniInicializar(400, 240, false);
 
 	srand(time(0));
 	//Fonte
