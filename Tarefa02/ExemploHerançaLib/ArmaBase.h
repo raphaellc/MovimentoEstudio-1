@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "libUnicornio.h"
-#include <Windows.h>
+#include <windows.h>
 
 using namespace std;
 

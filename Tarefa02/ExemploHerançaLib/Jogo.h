@@ -4,7 +4,6 @@
 #include "Motosserra.h"
 #include "Metralhadora.h"
 #include "Calibre12.h"
-#include <windows.h>
 
 class Jogo
 {
