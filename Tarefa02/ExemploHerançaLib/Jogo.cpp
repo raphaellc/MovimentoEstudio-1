@@ -79,13 +79,7 @@ void Jogo::executar()
 			
 		//Atira e Recarrega
 		if (getArma() != NADA) {
-			if (getArma() == METRALHADORA) {
-				if (gTeclado.segurando[TECLA_A]) {
-					arrayArmas[i].atacar();
-					Sleep(80);
-				}
-			}
-			else if (gTeclado.pressionou[TECLA_A]) {
+			if (gTeclado.segurando[TECLA_A]) {
 				arrayArmas[i].atacar();
 			}
 			if (gTeclado.pressionou[TECLA_D]) {

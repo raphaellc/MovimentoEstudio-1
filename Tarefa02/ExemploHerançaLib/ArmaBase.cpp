@@ -3,7 +3,15 @@
 void ArmaBase::atacar()
 {
 	if (ammo > 0) {
-		ammo--;
+		if (getID() != "Auto-Rifle") {
+			if (gTeclado.pressionou[TECLA_A]) {
+				ammo--;
+			}
+		}
+		else {
+			Sleep(80);
+			ammo--;
+		}
 	}
 }
 
