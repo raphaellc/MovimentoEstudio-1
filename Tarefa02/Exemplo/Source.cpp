@@ -38,8 +38,6 @@ int main() {
 		}
 	}while()*/
 
-
-
 	system("pause");
 	return 0;
 }
