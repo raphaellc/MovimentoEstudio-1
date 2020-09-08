@@ -49,7 +49,6 @@ void Jogo::executar()
 	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair && !sair)
 	{
 		uniIniciarFrame();
-		srand(time(0));
 
 		//Menus
 		if (getArma() != NADA) {
