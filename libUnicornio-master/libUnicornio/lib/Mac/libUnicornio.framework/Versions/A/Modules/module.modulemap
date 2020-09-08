@@ -1,6 +1,0 @@
-framework module libUnicornio {
-  umbrella header "libUnicornio.h"
-
-  export *
-  module * { export * }
-}
