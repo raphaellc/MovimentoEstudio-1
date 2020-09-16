@@ -1,9 +1,10 @@
 #include "Lista.h"
+#include <iostream> 
 
 Lista::Lista()
 {
-	inicio_lista = nullptr;
-	fim_lista = nullptr;
+	inicio_lista = fim_lista = nullptr;
+
 	qtdNo = 0;
 }
 
@@ -30,9 +31,12 @@ void Lista::inserirLista(int elemento)
 
 void Lista::removerLista()
 {
-	fim_lista = nullptr;
+	delete fim_lista;
+	*aux = std :: nullptr_t;
 	percorrerLista();
-	fim_lista = aux;
+	std::cout << aux->getDado();
+	//aux->setProximo(nullptr);
+	//fim_lista = aux;
 }
 
 int Lista::buscarLista(int pos)

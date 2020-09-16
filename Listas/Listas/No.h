@@ -9,10 +9,10 @@ public:
 	int getDado();
 	void setDado(int d); //O que faz esse método. 
 	//Insira outro metodo aqui
-	No * getProximo();
+	No* getProximo();
 	void setProximo(No * prox);
 private:
 	int dado = 0;
-	No * proximoNo;
+	No* proximoNo;
 };
 
