@@ -14,6 +14,7 @@ public:
 
 private:
 	void percorrerLista(); //Percorre todos elementos da lista
+	void percorrerListaAte(No* n);
 	bool listaVazia(); //Verifica se a lista está vazia
 
 	No* inicio_lista;

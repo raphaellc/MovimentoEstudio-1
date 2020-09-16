@@ -22,8 +22,7 @@ int main() {
 
 	minha_lista->removerLista();
 	
-	//cout << "Dado no Nó da posição 4: " << minha_lista->buscarLista(4) << endl;
-	//cout << "Último Nó: " << minha_lista->obterUltimoElemento() << endl;
+	cout << "Último Nó: " << minha_lista->obterUltimoElemento() << endl;
 
 	return 0;
 }

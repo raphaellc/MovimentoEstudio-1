@@ -31,12 +31,10 @@ void Lista::inserirLista(int elemento)
 
 void Lista::removerLista()
 {
+	percorrerListaAte(fim_lista);
 	delete fim_lista;
-	*aux = std :: nullptr_t;
-	percorrerLista();
-	std::cout << aux->getDado();
-	//aux->setProximo(nullptr);
-	//fim_lista = aux;
+	aux->setProximo(nullptr);
+	fim_lista = aux;
 }
 
 int Lista::buscarLista(int pos)
@@ -61,6 +59,14 @@ void Lista::percorrerLista()
 {
 	aux = inicio_lista;
 	while (aux->getProximo() != nullptr) {
+		aux = aux->getProximo();
+	}
+}
+
+void Lista::percorrerListaAte(No* n)
+{
+	aux = inicio_lista;
+	while (aux->getProximo() != n) {
 		aux = aux->getProximo();
 	}
 }
