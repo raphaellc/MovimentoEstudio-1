@@ -44,7 +44,6 @@ int Lista::buscarLista(int pos)
 	for(int i= 0; i < pos; i++) { //Percorre a lista até encontrar o nó na posição inserida
 		aux = aux->getProximo();
 	}
-
 	return aux->getDado(); //Retorna o nó desejado
 }
 
