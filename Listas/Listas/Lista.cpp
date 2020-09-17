@@ -35,6 +35,7 @@ void Lista::removerLista()
 	delete fim_lista;
 	aux->setProximo(nullptr);
 	fim_lista = aux;
+	qtdNo--;
 }
 
 int Lista::buscarLista(int pos)
