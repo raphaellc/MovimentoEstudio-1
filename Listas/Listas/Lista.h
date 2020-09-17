@@ -4,7 +4,7 @@ class Lista
 {
 public: 
 	Lista();
-	~Lista();
+	~Lista() {};
 	void inserirLista(int elemento); //Insere um Nó com dado no próximo espaço vago
 	void removerLista(); //Remove o último elemento da lista
 	int buscarLista(int pos); //Retorna o dado de um Nó na posição especificada
