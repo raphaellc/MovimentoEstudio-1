@@ -24,5 +24,7 @@ int main() {
 	
 	cout << "Último Nó: " << minha_lista->obterUltimoElemento() << endl;
 
+	minha_lista->imprimirLista();
+
 	return 0;
 }

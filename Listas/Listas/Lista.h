@@ -11,6 +11,8 @@ public:
 	int quantidadeElementos(); //Retorna quantos nos tem na lista
 	int obterPrimeiroElemento(); //Retorna o dado do primeiro no da lista
 	int obterUltimoElemento(); //Retorna o dado do ultimo elemento
+	
+	void imprimirLista();
 
 private:
 	void percorrerLista(); //Percorre todos elementos da lista

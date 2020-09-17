@@ -1,6 +1,8 @@
 #include "Lista.h"
 #include <iostream> 
 
+using namespace std;
+
 Lista::Lista()
 {
 	inicio_lista = fim_lista = aux = nullptr;
@@ -27,8 +29,13 @@ void Lista::removerLista()
 	qtdNo--;
 	percorrerLista(); //Encontrar o penúltimo nó da lista
 	delete fim_lista; //Desaloca a última posição
-	aux->setProximo(nullptr); //Configura valor nulo para a variável proximoNo do penúltimo nó
-	fim_lista = aux; //Corrige qual o último nó da lista
+	if (fim_lista == inicio_lista) {
+		inicio_lista = fim_lista = aux = nullptr;
+	}
+	else {
+		aux->setProximo(nullptr); //Configura valor nulo para a variável proximoNo do penúltimo nó
+		fim_lista = aux; //Corrige qual o último nó da lista
+	}
 }
 
 int Lista::buscarLista(int pos)
@@ -70,4 +77,19 @@ int Lista::obterPrimeiroElemento()
 int Lista::obterUltimoElemento()
 {
 	return fim_lista->getDado();
+}
+
+void Lista::imprimirLista()
+{
+	aux = inicio_lista;
+	if (listaVazia()) {
+		cout << "Lista vazia!";
+	}
+	else {
+		cout << "Posição 0: " << aux->getDado() << endl;
+		for (int i = 0; i < qtdNo - 1; i++) {
+			aux = aux->getProximo();
+			cout << "Posição " << i + 1 << ": " << aux->getDado() << endl;
+		}
+	}
 }
