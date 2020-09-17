@@ -10,42 +10,37 @@ Lista::Lista()
 
 void Lista::inserirLista(int elemento)
 {
-	//Define o nó e insere o elemento no nó
-	//encapsulda o dado no nó
-	No * n = new No;
-	n->setDado(elemento);
-	//insere o nó na lista
-	//caso a lista esteja vazia
-	if (listaVazia()) {
-		inicio_lista = n;
+	
+	No * n = new No; //Define o nó e insere o elemento no nó
+	n->setDado(elemento); //Encapsula o dado no nó
+	if (listaVazia()) { //Caso a lista esteja vazia
+		inicio_lista = n; //Insere o nó na lista
 	}
-	else {
-		//caso não esteja vazia
-		//encontrar o último nó da lista
-		percorrerLista();
-		aux->setProximo(n);
-		fim_lista = n;
+	else {//Caso não esteja vazia
+		percorrerLista(); //Encontrar o último nó da lista
+		aux->setProximo(n); //Insere o nó na lista
 	}
+	fim_lista = n; //Configura o novo nó como sendo o último da lista
 	qtdNo++;
 }
 
 void Lista::removerLista()
 {
-	percorrerListaAte(fim_lista);
-	delete fim_lista;
-	aux->setProximo(nullptr);
-	fim_lista = aux;
+	percorrerListaAte(fim_lista); //Encontrar o penúltimo nó da lista
+	delete fim_lista; //Desaloca a última posição
+	aux->setProximo(nullptr); //Configura valor nulo para a variável proximoNo do penúltimo nó
+	fim_lista = aux; //Corrige qual o último nó da lista
 	qtdNo--;
 }
 
 int Lista::buscarLista(int pos)
 {
 	aux = inicio_lista;
-	for(int i= 0; i < pos; i++) {
+	for(int i= 0; i < pos; i++) { //Percorre a lista até encontrar o nó na posição inserida
 		aux = aux->getProximo();
 	}
 
-	return aux->getDado();
+	return aux->getDado(); //Retorna o nó desejado
 }
 
 bool Lista::listaVazia()
@@ -64,7 +59,7 @@ void Lista::percorrerLista()
 	}
 }
 
-void Lista::percorrerListaAte(No* n)
+void Lista::percorrerListaAte(No* n) //Modificação do método percorrerLista(), percorre a lista até o nó recebido por parâmetro
 {
 	aux = inicio_lista;
 	while (aux->getProximo() != n) {
