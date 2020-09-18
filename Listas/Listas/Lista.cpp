@@ -33,7 +33,7 @@ void Lista::removerLista()
 		inicio_lista = fim_lista = aux = nullptr;
 	}
 	else {
-		aux->setProximo(nullptr); //Configura valor nulo para a variável proximoNo do penúltimo nó
+		aux->setProximo(nullptr); //Configura valor nulo para o ponteiro proximoNo do penúltimo nó
 		fim_lista = aux; //Corrige qual o último nó da lista
 	}
 }
