@@ -127,7 +127,7 @@ void Lista::removePrimeiroNo()
 	qtdNo--;
 	aux = inicio_lista;//Seta o Aux na posição Inicial
 	aux=aux->getProximo();//Se desloca para a segunda posição
-	if (fim_lista == inicio_lista) {
+	if (inicio_lista->getProximo() == nullptr) {
 		delete inicio_lista;//Desaloca a primeira posição
 		inicio_lista = fim_lista = aux = nullptr;
 	}
@@ -150,9 +150,12 @@ void Lista::removeElemento(int* elemento)
 
 void Lista::esvaziaLista()
 {
-	aux = inicio_lista;
-	while (aux->getProximo() != nullptr) removePrimeiroNo();//Esvazia até o penúltimo Nó
-	removePrimeiroNo();//Esvazia o último Nó
+	if (listaVazia()) {
+		aux = inicio_lista;
+		while (aux->getProximo() != nullptr) removePrimeiroNo();//Esvazia até o penúltimo Nó
+		removePrimeiroNo();//Esvazia o último Nó
+	}
+	else cout << "Lista vazia!\n";
 }
 
 bool Lista::contemNaLista(int* elemento/*, No* param_lista*/)
@@ -161,7 +164,7 @@ bool Lista::contemNaLista(int* elemento/*, No* param_lista*/)
 	for (int i = 0; i < qtdNo; i++)
 	{
 		if (aux->getDado() == *elemento) return true;
-		else if(aux->getProximo != nullptr) aux = aux->getProximo();
+		else if(aux->getProximo() != nullptr) aux = aux->getProximo();
 	}
 	return false;
 }
@@ -189,7 +192,7 @@ void Lista::imprimirLista()
 {
 	aux = inicio_lista;
 	if (listaVazia()) {
-		cout << "Lista vazia!";
+		cout << "Lista vazia!\n";
 	}
 	else {
 		cout << "Posição 0: " << aux->getDado() << endl;
