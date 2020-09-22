@@ -11,6 +11,18 @@ public:
 	int quantidadeElementos(); //Retorna quantos nos tem na lista
 	int obterPrimeiroElemento(); //Retorna o dado do primeiro no da lista
 	int obterUltimoElemento(); //Retorna o dado do ultimo elemento
+
+	//Novos métodos
+	void insereFimLista(int * elemento); //Insere um nó com dado definido por parâmetro no fim da lista
+	int insereEm(int posicao, int * elemento); //1 - Sucesso; 0 - Erro
+	void removeUltimoNo();
+	void removePrimeiroNo();
+	void removeElemento(int * elemento);
+	void esvaziaLista();
+	bool contemNaLista(const int* elemento, No * param_lista = lista);
+	int* obterUltimoElemento();
+	int* obterPrimeiroElemento();
+	int* obterElementoEm(int posicao);
 	
 	void imprimirLista();
 
