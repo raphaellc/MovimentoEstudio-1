@@ -9,8 +9,8 @@ public:
 	void removerLista(); //Remove o último elemento da lista
 	int buscarLista(int pos); //Retorna o dado de um Nó na posição especificada
 	int quantidadeElementos(); //Retorna quantos nos tem na lista
-	int obterPrimeiroElemento(); //Retorna o dado do primeiro no da lista
-	int obterUltimoElemento(); //Retorna o dado do ultimo elemento
+	int obterPrimeiroElementoObsoleto(); //Retorna o dado do primeiro no da lista
+	int obterUltimoElementoObsoleto(); //Retorna o dado do ultimo elemento
 
 	//Novos métodos
 	void insereFimLista(int * elemento); //Insere um nó com dado definido por parâmetro no fim da lista
@@ -19,7 +19,7 @@ public:
 	void removePrimeiroNo();
 	void removeElemento(int * elemento);
 	void esvaziaLista();
-	bool contemNaLista(const int* elemento, No * param_lista = lista);
+	bool contemNaLista(int* elemento/*, No * param_lista = lista*/);
 	int* obterUltimoElemento();
 	int* obterPrimeiroElemento();
 	int* obterElementoEm(int posicao);
@@ -33,5 +33,6 @@ private:
 	No* inicio_lista;
 	No* fim_lista;
 	No* aux;
+	int* temp;
 	int qtdNo;
 };

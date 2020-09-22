@@ -68,12 +68,12 @@ int Lista::quantidadeElementos()
 	return qtdNo;
 }
 
-int Lista::obterPrimeiroElemento()
+int Lista::obterPrimeiroElementoObsoleto()
 {
 	return inicio_lista->getDado();
 }
 
-int Lista::obterUltimoElemento()
+int Lista::obterUltimoElementoObsoleto()
 {
 	return fim_lista->getDado();
 }
@@ -97,14 +97,29 @@ void Lista::insereFimLista(int* elemento)
 
 int Lista::insereEm(int posicao, int* elemento)
 {
-	int elemente = *elemento;
 	aux = inicio_lista;
 	for (int i = 0; i < posicao; i++) {//Atinge a posição desejada
 		aux->getProximo();
 	}
-	qtdNo++;
-	aux->setDado(*elemento);
-	
+	if (aux->getDado() == NULL) {
+		aux->setDado(*elemento);
+		return 1;
+	}
+	else return 0;
+}
+
+void Lista::removeUltimoNo()
+{
+	qtdNo--;
+	percorrerLista(); //Encontrar o penúltimo nó da lista
+	delete fim_lista; //Desaloca a última posição
+	if (fim_lista == inicio_lista) {
+		inicio_lista = fim_lista = aux = nullptr;
+	}
+	else {
+		aux->setProximo(nullptr); //Configura valor nulo para o ponteiro proximoNo do penúltimo nó
+		fim_lista = aux; //Corrige qual o último nó da lista
+	}
 }
 
 void Lista::removePrimeiroNo()
@@ -112,12 +127,12 @@ void Lista::removePrimeiroNo()
 	qtdNo--;
 	aux = inicio_lista;//Seta o Aux na posição Inicial
 	aux=aux->getProximo();//Se desloca para a segunda posição
-	delete inicio_lista; //Desaloca a primeira posição
 	if (fim_lista == inicio_lista) {
+		delete inicio_lista;//Desaloca a primeira posição
 		inicio_lista = fim_lista = aux = nullptr;
 	}
 	else {
-		
+		delete inicio_lista;//Desaloca a primeira posição
 		inicio_lista = aux; //Corrige qual o primeiro nó da lista
 	}
 }
@@ -135,26 +150,39 @@ void Lista::removeElemento(int* elemento)
 
 void Lista::esvaziaLista()
 {
-	for (int x = 0; x < qtdNo; x++)
-	{
-		aux = inicio_lista;//Seta o Aux na posição Inicial
-		aux = aux->getProximo();//Se desloca para a segunda posição
-		delete inicio_lista; //Desaloca a primeira posição
-		if (fim_lista == inicio_lista) {
-			inicio_lista = fim_lista = aux = nullptr;
-		}
-		else {
-
-			inicio_lista = aux; //Corrige qual o primeiro nó da lista
-		}
-	}
-
-	qtdNo = 0;
+	aux = inicio_lista;
+	while (aux->getProximo() != nullptr) removePrimeiroNo();//Esvazia até o penúltimo Nó
+	removePrimeiroNo();//Esvazia o último Nó
 }
 
-bool Lista::contemNaLista(const int* elemento, No* param_lista)
+bool Lista::contemNaLista(int* elemento/*, No* param_lista*/)
 {
+	aux = inicio_lista;
+	for (int i = 0; i < qtdNo; i++)
+	{
+		if (aux->getDado() == *elemento) return true;
+		else if(aux->getProximo != nullptr) aux = aux->getProximo();
+	}
 	return false;
+}
+
+int* Lista::obterUltimoElemento()
+{
+	*temp = fim_lista->getDado();
+	return temp;
+}
+
+int* Lista::obterPrimeiroElemento()
+{
+	*temp = inicio_lista->getDado();
+	return temp;
+}
+
+int* Lista::obterElementoEm(int posicao)
+{
+	buscarLista(posicao);
+	*temp = aux->getDado();
+	return temp;
 }
 
 void Lista::imprimirLista()
