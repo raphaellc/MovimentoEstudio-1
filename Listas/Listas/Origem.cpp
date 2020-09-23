@@ -22,37 +22,46 @@ int main() {
 	minha_lista->insereFimLista(zero);
 	minha_lista->insereFimLista(um);
 
-	
+	cout << "Dado no Nó da posição 1: " << *minha_lista->obterElementoEm(1) << endl;
+	cout << "Primeiro Nó: " << *minha_lista->obterPrimeiroElemento() << endl;
+	cout << "Último Nó: " << *minha_lista->obterUltimoElemento() << endl;
 
-	//cout << "Dado no Nó da posição 1: " << minha_lista->obterElementoEm(1) << endl;
-	//cout << "Quantidade de Nós: " << minha_lista->quantidadeElementos() << endl;
-	//cout << "Último Nó: " << minha_lista->obterUltimoElemento() << endl;
+	//minha_lista->insereInicioLista(dois);//+
 
-	minha_lista->removeUltimoNo();//+
+	//minha_lista->removeUltimoNo();//+
+
+	minha_lista->imprimirLista();//+
+
+	minha_lista->insereEm(1, dois);
 
 	minha_lista->imprimirLista();//+
 
-	//minha_lista->insereFimLista(um);
+	//minha_lista->removeNo(dois);
 
-	//minha_lista->insereFimLista(dois);
+	//minha_lista->removePrimeiroNo();//+
 
-	minha_lista->removePrimeiroNo();//+
-
-	minha_lista->imprimirLista();//+
+	//minha_lista->imprimirLista();//+
 
 	//minha_lista->removeElemento(dois);
 
-	minha_lista->imprimirLista();//+
+	//minha_lista->imprimirLista();//+
 
 	//minha_lista->insereEm(0, zero);
 
 	if (minha_lista->contemNaLista(zero)) cout << "Tem sim\n";//+
 
-	//minha_lista->esvaziaLista();
+	//minha_lista->insereFimLista(zero);
+
+	//minha_lista->imprimirLista();//+
+
+	minha_lista->esvaziaLista();	
 
 	minha_lista->imprimirLista();//+
 
-	cout << "/-------------------------------------------------------------------------/\n";
+	delete minha_lista;
+
+	/*cout << "/-------------------------------------------------------------------------/\n";
+	minha_lista = new Lista;
 
 	for (int i = 0; i < 5; i++) {
 		minha_lista->inserirLista(i);
@@ -67,8 +76,7 @@ int main() {
 	
 	cout << "Último Nó: " << minha_lista->obterUltimoElementoObsoleto() << endl;
 
-	minha_lista->imprimirLista();
-
+	minha_lista->imprimirLista();*/
 
 	return 0;
 }

@@ -14,10 +14,11 @@ public:
 
 	//Novos métodos
 	void insereFimLista(int * elemento); //Insere um nó com dado definido por parâmetro no fim da lista
-	int insereEm(int posicao, int * elemento); //1 - Sucesso; 0 - Erro
+	void insereInicioLista(int * elemento);
+	void insereEm(int posicao, int * elemento);
 	void removeUltimoNo();
 	void removePrimeiroNo();
-	void removeElemento(int * elemento);
+	void removeNo(int * elemento);//
 	void esvaziaLista();
 	bool contemNaLista(int* elemento/*, No * param_lista = lista*/);
 	int* obterUltimoElemento();
@@ -34,5 +35,6 @@ private:
 	No* fim_lista;
 	No* aux;
 	int* temp;
+	int temporaria;
 	int qtdNo;
 };
