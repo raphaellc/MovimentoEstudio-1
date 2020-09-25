@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 	setlocale(LC_ALL, "ptb");
 
-	Lista* minha_lista = new Lista;
+	Lista<int>* minha_lista = new Lista<int>;
 
 	//Nós de 0 a 4
 	int* zero = new int;
