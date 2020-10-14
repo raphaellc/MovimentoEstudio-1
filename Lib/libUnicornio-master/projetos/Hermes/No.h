@@ -1,4 +1,6 @@
 #pragma once
+#include "Dialog.h"
+
 template <class T>
 class No
 {

@@ -99,6 +99,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dialog.cpp" />
+    <ClCompile Include="DialogManager.cpp" />
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -107,6 +109,8 @@
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dialog.h" />
+    <ClInclude Include="DialogManager.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
