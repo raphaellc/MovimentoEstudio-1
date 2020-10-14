@@ -100,6 +100,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Dialog.cpp" />
+    <ClCompile Include="DialogBox.cpp" />
     <ClCompile Include="DialogManager.cpp" />
     <ClCompile Include="Fase.cpp" />
     <ClCompile Include="GameManager.cpp" />
@@ -110,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dialog.h" />
+    <ClInclude Include="DialogBox.h" />
     <ClInclude Include="DialogManager.h" />
     <ClInclude Include="Fase.h" />
     <ClInclude Include="GameManager.h" />
