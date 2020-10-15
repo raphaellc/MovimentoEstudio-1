@@ -1,5 +1,15 @@
 #include "Player.h"
 
+float* Player::getVelocidade()
+{
+	return nullptr;
+}
+
+Direcao* Player::getDirecao()
+{
+	return nullptr;
+}
+
 void Player::inicializar()
 {
 	if (!gRecursos.carregouSpriteSheet("personagem"))

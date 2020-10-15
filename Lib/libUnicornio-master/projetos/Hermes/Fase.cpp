@@ -16,7 +16,7 @@ void Fase::inicializar()
 	interacao.setVelocidadeAnimacao(3.2);
 
 	resetar();
-	
++	
 }
 
 void Fase::atualizar()//ponteiro
