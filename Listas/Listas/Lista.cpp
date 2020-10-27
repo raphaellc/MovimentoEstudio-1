@@ -235,7 +235,7 @@ int* Lista::obterUltimoElemento()
 	return &temporaria;
 }
 
-int* Lista::obterPrimeiroElemento()
+int *Lista::obterPrimeiroElemento()
 {
 	*temp = inicio_lista->getDado();
 	return temp;

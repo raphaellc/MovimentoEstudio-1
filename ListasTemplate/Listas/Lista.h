@@ -54,7 +54,7 @@ inline Lista<T>::Lista()
 template <class T>
 inline void Lista<T>::inserirLista(T elemento)
 {
-	No* n = new No; //Define o nó e insere o elemento no nó
+	No<T>* n = new No<T>; //Define o nó e insere o elemento no nó
 	n->setDado(elemento); //Encapsula o dado no nó
 	if (listaVazia()) { //Caso a lista esteja vazia
 		inicio_lista = n; //Insere o nó na lista
