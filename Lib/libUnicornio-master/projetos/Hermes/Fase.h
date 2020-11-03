@@ -12,13 +12,14 @@ public:
 	void descarregar() {};
 	void desenhar();
 
-	Sprite getIntSprite() { return interacao; }
-	Vetor2D getPosInteracao() { return posicaoInt; }
+	Sprite* getIntSprite() { return interacao; }
+	Vetor2D* getPosInteracao() { return posicaoInt; }
 
 protected:
 	void resetar();
 
-	Sprite fundo, interacao;
-	Vetor2D posicaoInt;
+	Sprite* fundo;
+	Sprite* interacao;
+	Vetor2D * posicaoInt;
 };
 

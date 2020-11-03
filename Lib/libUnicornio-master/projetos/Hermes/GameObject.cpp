@@ -1,16 +1,16 @@
 #include "GameObject.h"
 
-Sprite GameObject::getSprite()
+Sprite* GameObject::getSprite()
 {
 	return sprite;
 }
 
-Vetor2D GameObject::getPosicao()
+Vetor2D* GameObject::getPosicao()
 {
 	return posicao;
 }
 
-ID GameObject :: getId()
+ID* GameObject :: getId()
 {
 	return id;
 }

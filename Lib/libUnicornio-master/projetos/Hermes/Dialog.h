@@ -4,13 +4,16 @@
 class Dialog
 {
 public:
+	Dialog();
+	~Dialog() {};
+
 	int* getId();
 	int* getId_Personagem();
-	Lista<string*> getFala();
+	Lista<string*>* getFala();
 
 private:
 	int* id;
 	int* id_personagem;
-	Lista<string*> fala;
+	Lista<string*>* fala;
 };
 

@@ -4,9 +4,28 @@ DialogBox::DialogBox()
 {
 	texto = new Texto;
 	sprite = new Sprite;
+
+	inicializar();
 }
 
 DialogBox::~DialogBox()
+{
+}
+
+void DialogBox::inicializar()
+{
+
+}
+
+void DialogBox::atualizar(Vetor2D p, Sprite s)
+{
+}
+
+void DialogBox::desenhar()
+{
+}
+
+void DialogBox::resetar()
 {
 }
 

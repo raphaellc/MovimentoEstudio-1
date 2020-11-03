@@ -174,8 +174,8 @@ void Jogo::telaJogo()
 
 	player.desenhar();
 
-	if (uniTestarColisao(player.getSprite(), player.getPosicao().x, player.getPosicao().y, 0, fase.getIntSprite(), fase.getPosInteracao().x + 4, fase.getPosInteracao().y, 0) || uniTestarColisao(player.getSprite(), player.getPosicao().x, player.getPosicao().y, 0, fase.getIntSprite(), fase.getPosInteracao().x - 4, fase.getPosInteracao().y, 0) || uniTestarColisao(player.getSprite(), player.getPosicao().x, player.getPosicao().y, 0, fase.getIntSprite(), fase.getPosInteracao().x, fase.getPosInteracao().y + 4, 0) || uniTestarColisao(player.getSprite(), player.getPosicao().x, player.getPosicao().y, 0, fase.getIntSprite(), fase.getPosInteracao().x, fase.getPosInteracao().y - 4, 0)) {
-		indicacao.desenhar(player.getPosicao().x, player.getPosicao().y - 70);
+	if (uniTestarColisao(*player.getSprite(), player.getPosicao()->x, player.getPosicao()->y, 0, *fase.getIntSprite(), fase.getPosInteracao()->x + 4, fase.getPosInteracao()->y, 0) || uniTestarColisao(*player.getSprite(), player.getPosicao()->x, player.getPosicao()->y, 0, *fase.getIntSprite(), fase.getPosInteracao()->x - 4, fase.getPosInteracao()->y, 0) || uniTestarColisao(*player.getSprite(), player.getPosicao()->x, player.getPosicao()->y, 0, *fase.getIntSprite(), fase.getPosInteracao()->x, fase.getPosInteracao()->y + 4, 0) || uniTestarColisao(*player.getSprite(), player.getPosicao()-> x, player.getPosicao()->y, 0, *fase.getIntSprite(), fase.getPosInteracao()->x, fase.getPosInteracao()->y - 4, 0)) {
+		indicacao.desenhar(player.getPosicao()->x, player.getPosicao()->y - 70);
 		indicacao.avancarAnimacao();
 		if (gTeclado.segurando[TECLA_E]) {
 			criaConversas();
@@ -204,17 +204,14 @@ void Jogo::telaJogo()
 	}
 	else {
 		fase.atualizar();
-		player.atualizar(fase.getPosInteracao(), fase.getIntSprite());
+		player.atualizar(*fase.getPosInteracao(), *fase.getIntSprite());
 	}
 
-	if (player.getPosicao().y < player.getSprite().getAltura() / 2)
+	if (player.getPosicao()->y < player.getSprite()->getAltura() / 2)
 	{
 		telaAtual = tTeste;
 		telaTeste();
-
 	}
-	//gDebug.setPos(0, 0);
-	//gDebug.depurar("X, Y: ", Vetor2D(player.getPosicao().x, player.getPosicao().y));
 }
 
 void Jogo::resetar()

@@ -7,6 +7,11 @@ public:
 	DialogBox();
 	~DialogBox();
 
+	void inicializar() override;
+	void atualizar(Vetor2D p, Sprite s) override;
+	void desenhar() override;
+	void resetar() override;
+
 	void setTexto(string t);
 	void setSprite(string s);
 

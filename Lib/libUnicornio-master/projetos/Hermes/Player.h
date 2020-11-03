@@ -7,7 +7,7 @@ enum Direcao { dDireita, dEsquerda };
 class Player : public GameObject
 {
 public:
-	Player() {};
+	Player();
 	~Player() {};
 
 	float* getVelocidade();

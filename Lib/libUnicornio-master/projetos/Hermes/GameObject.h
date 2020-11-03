@@ -12,12 +12,12 @@ public:
 	virtual void desenhar() = 0;
 	virtual void resetar() = 0;
 	
-	ID getId();
-	Sprite getSprite();
-	Vetor2D getPosicao();
+	ID* getId();
+	Sprite* getSprite();
+	Vetor2D* getPosicao();
 protected:
-	Sprite sprite;
-	Vetor2D posicao;
-	ID id;
+	Sprite* sprite;
+	Vetor2D* posicao;
+	ID* id;
 };
 
