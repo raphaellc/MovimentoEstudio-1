@@ -22,7 +22,7 @@ void Player::inicializar()
 	{
 		gRecursos.carregarSpriteSheet("personagem", "./assets/personagens/playerSS.png", 2, 1);
 	}
-	sprite.setSpriteSheet("personagem");
+	sprite->setSpriteSheet("personagem");
 
 	resetar();
 
