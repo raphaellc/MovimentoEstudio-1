@@ -22,4 +22,3 @@ private:
 	DialogManager* dm;
 	Personagem* personagens;
 };
-
